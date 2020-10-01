@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgChoose"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextStyle"
+            android:layout_margin="16dp"
+            app:layout_constraintLeft_toRightOf="@+id/imgChoose"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price - $"
+            style="@style/TextStyle"
+            app:layout_constraintLeft_toLeftOf="@+id/txtName"
+            app:layout_constraintTop_toBottomOf="@+id/txtName"/>
+
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextStyle"
+            android:layout_margin="20dp"
+            app:layout_constraintLeft_toRightOf="@id/txtLabel"
+            app:layout_constraintBaseline_toBaselineOf="@id/txtLabel"/>
+
+        <ImageButton
+            android:id="@+id/imgSub"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/minus"
+            android:background="@drawable/btnone_shape"
+            app:layout_constraintLeft_toRightOf="@+id/imgChoose"
+            app:layout_constraintTop_toBottomOf="@id/txtLabel"
+            />
+
+
+        <TextView
+            android:id="@+id/txtWeight"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            style="@style/TextStyle"
+            app:layout_constraintLeft_toRightOf="@+id/imgSub"
+            app:layout_constraintTop_toBottomOf="@id/txtPrice"
+
+            />
+
+
+        <ImageView
+            android:id="@+id/imgAdd"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/add"
+            android:background="@drawable/btnone_shape"
+            app:layout_constraintLeft_toRightOf="@+id/txtWeight"
+            app:layout_constraintTop_toBottomOf="@id/txtPrice"
+
+            />
+
+        <Button
+            android:id="@+id/btnDiscount"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/btn_shape"
+            android:text="$10 Discount"
+            android:textColor="#F15D2E"
+            android:textSize="15sp"
+            android:textAllCaps="false"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtName"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/txtName"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
